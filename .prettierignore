@@ -1,0 +1,8 @@
+# Ignore artifacts:
+dist
+coverage
+**/*.MD
+**/*.yaml
+**/*.json
+**/*.mts
+.prettierrc
