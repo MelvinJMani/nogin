@@ -6,6 +6,8 @@ pre-commit:
 
 pre-push:
   commands:
+    branch-name:
+      run: node scripts/validate-branch-name.cjs
     typecheck:
       run: pnpm tsc -p tsconfig.json --noEmit
     tests:
