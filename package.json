@@ -11,7 +11,10 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "prepare": "lefthook install",
+    "commitlint": "commitlint",
+    "preinstall": "node -e \"if(!/pnpm/.test(process.env.npm_execpath||'')){console.error('Use pnpm');process.exit(1)}\""
   },
   "dependencies": {
     "idb-keyval": "^6.2.2",
@@ -21,6 +24,8 @@
     "zustand": "^5.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
@@ -37,6 +42,8 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "jsdom": "^26.1.0",
+    "lefthook": "^1.12.2",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.0",

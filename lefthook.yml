@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint-staged:
+      run: pnpm lint-staged
+
+pre-push:
+  commands:
+    typecheck:
+      run: pnpm tsc -p tsconfig.json --noEmit
+    tests:
+      run: pnpm test --run
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm commitlint --edit $1
