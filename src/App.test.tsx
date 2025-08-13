@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders app title', () => {
   render(<App />);
-  const title = screen.getByRole('heading', { name: /nogin|vite \+ react/i });
+  const title = screen.getByRole('heading', { name: /nogin/i });
   expect(title).toBeInTheDocument();
 });
