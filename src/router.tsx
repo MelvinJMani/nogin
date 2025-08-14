@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from './ui/AppLayout';
 import { Home } from './ui/Home';
 import { GamePage } from './ui/GamePage';
+import { ErrorPage } from './ui/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       { path: 'sudoku', element: <GamePage title='Sudoku' /> },
       { path: '2048', element: <GamePage title='2048' /> },
       { path: 'tetris', element: <GamePage title='Tetris' /> },
+      {
+        path: '*',
+        element: <ErrorPage errorCode={404} errorMessage='Page not found' />,
+      },
     ],
   },
 ]);
