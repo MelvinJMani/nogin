@@ -10,9 +10,9 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'sudoku', element: <GamePage title='Sudoku' /> },
-      { path: '2048', element: <GamePage title='2048' /> },
-      { path: 'tetris', element: <GamePage title='Tetris' /> },
+      { path: 'sudoku', element: <GamePage game='sudoku' /> },
+      // { path: '2048', element: <GamePage game='2048' /> },
+      // { path: 'tetris', element: <GamePage game='tetris' /> },
       {
         path: '*',
         element: <ErrorPage errorCode={404} errorMessage='Page not found' />,
