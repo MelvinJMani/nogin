@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'sudoku', element: <GamePage game='sudoku' /> },
-      // { path: '2048', element: <GamePage game='2048' /> },
+      { path: '2048', element: <GamePage game='2048' /> },
       // { path: 'tetris', element: <GamePage game='tetris' /> },
       {
         path: '*',

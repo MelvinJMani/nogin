@@ -41,6 +41,14 @@ html[data-ink-mode='amber'] {
   --ink-accent: 0, 0, 0;
   --ink-noise: 0.02;
 }
+html[data-ink-mode='dark'] {
+  --ink-bg: 30, 29, 26;
+  --ink-fg: 231, 224, 212;
+  --ink-weak: 162, 155, 144;
+  --ink-border: 90, 84, 76;
+  --ink-accent: 231, 224, 212;
+  --ink-noise: 0.015;
+}
 
 /* Base */
 html,
@@ -99,4 +107,36 @@ body {
   100% {
     filter: invert(0);
   }
+}
+
+/* Sudoku grid box boundaries */
+.sudoku-cell[data-box-right='true'] {
+  border-right-width: 2px;
+}
+.sudoku-cell[data-box-bottom='true'] {
+  border-bottom-width: 2px;
+}
+
+/* 2048 tile appear animation */
+.tile-2048-new {
+  animation: tile2048Appear 120ms ease-out both;
+}
+@keyframes tile2048Appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Adaptive hint: naked-single cell indicator */
+.sudoku-cell-hinted::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px dashed rgba(var(--ink-weak), 0.3);
+  pointer-events: none;
 }

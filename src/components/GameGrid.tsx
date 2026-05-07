@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const GAMES: Game[] = [
   { name: 'Sudoku', path: '/sudoku', icon: '🧩' },
   { name: '2048', path: '/2048', icon: '🔢' },
-  { name: 'Tetris', path: '/tetris', icon: '🧱' },
 ];
 
 export default function GameGrid() {
